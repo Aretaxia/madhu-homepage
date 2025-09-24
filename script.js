@@ -395,6 +395,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Event listeners for Card Open buttons
+    const cardOpenBtns = document.querySelectorAll('.card-open-btn');
+    cardOpenBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const projectId = this.getAttribute('data-project');
+            openModal(projectId);
+        });
+    });
+    
     // Close modal when clicking X
     closeBtn.addEventListener('click', closeModal);
     
